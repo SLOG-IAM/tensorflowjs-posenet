@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from 'react';
 import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
 
@@ -79,7 +79,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <Text>아직 사진 파일만 가능...</Text>
+      <div>
+      아직 사진 파일만 가능... 사람들 사진을 drop 하세요
       <div className="Dropzone-page">
         {this.state.model ? (
           <MagicDropzone
@@ -103,6 +104,7 @@ class App extends React.Component {
         ) : (
           <div className="Dropzone">Loading model...</div>
         )}
+      </div>
       </div>
     );
   }
